@@ -13,24 +13,9 @@
     />
   </head>
   <body></body>
+  <script src="js/jspsych.js"></script>
+  <script src="js/jsPsychPreload.js"></script>
   <script>
-    /* initialize jsPsych */
-    var jsPsych = initJsPsych({
-      on_finish: function () {
-        jsPsych.data.displayData();
-      },
-    });
-
-    /* create timeline */
-    var timeline = [];
-
-    /* preload images */
-    var preload = {
-      type: jsPsychPreload,
-      images: ["img/blue.png", "img/orange.png"],
-    };
-    timeline.push(preload);
-
     /* define welcome message trial */
     var welcome = {
       type: jsPsychHtmlKeyboardResponse,
